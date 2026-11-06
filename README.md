@@ -1,19 +1,29 @@
-# AI New York — Website Starter
+# AI New York — Graffiti-Inspired Website Redesign
 
-A responsive, mobile-first single-page website for the AI New York concept.
+This is a refreshed static website prototype for AI New York.
 
-## Deploy on Vercel
-1. Create a GitHub repository named `ai-new-york`.
-2. Upload `index.html` to the repository root.
-3. In Vercel, choose **Add New → Project**, import `ai-new-york`, and deploy.
-4. No build command or environment variables are needed for this static starter.
+## What's included
+- Responsive NYC-inspired homepage with graffiti-style typography and photography.
+- Discover, How It Works, and AI NY Plus sections.
+- Interactive onboarding preview with local browser preference storage.
+- Guest experience with Home, Explore, AI NY chat preview, Saved, and Profile sections.
+- Planned freemium model: Free + AI NY Plus at $5.99/month.
 
-## Current functionality
-- Responsive NYC-inspired landing page
-- Interactive onboarding preference flow (demo; not saved)
-- Guest entry
-- Assistant preview (not connected to a live AI model)
-- Navigation and discovery sections
+## Important current limitations
+This is a front-end prototype. It does not yet include:
+- Real account creation or authentication.
+- Cloud database or cross-device profile syncing.
+- Live AI responses or verified live business listings.
+- Live maps, routing, or location-aware recommendations.
+- Stripe checkout or actual paid subscriptions.
 
-## Next build
-Connect real authentication and persistent profiles (e.g. Supabase), then add a secure server-side AI integration and real local discovery/maps. Do not put private API keys in browser code.
+No payment is collected. The $5.99/month amount is a planned launch price.
+
+## Deploy to the existing Vercel project
+1. Open the `ai-new-york` repository on GitHub.
+2. Replace the existing `index.html` with this new `index.html` (keep it at the repository root).
+3. Commit the change to the connected branch (usually `main`).
+4. Vercel should automatically build and deploy the update.
+5. Open https://ai-new-york.vercel.app and refresh.
+
+No build command or framework preset is needed; this is a static HTML site.

@@ -2,86 +2,210 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#091321">
-<meta name="description" content="AI New York — Your New Yorker in your pocket. Discover the city. Find your people. Find yourself.">
-<title>AI New York — Your New Yorker in your pocket</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101012">
+<title>AI New York — Your New Yorker in Your Pocket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
 <style>
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-:root{--bg:#091321;--panel:#101f30;--panel2:#14283b;--ink:#f4f4ef;--muted:#a9b5c0;--lime:#d5ff45;--pink:#ff5b91;--blue:#58c7ff;--orange:#ff9a45;--line:#ffffff1b}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif}button,input{font:inherit}button{cursor:pointer}.noise{position:fixed;inset:0;pointer-events:none;opacity:.08;z-index:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E")}
-header{height:76px;padding:0 clamp(18px,5vw,72px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:2;background:#091321e8;backdrop-filter:blur(14px);position:sticky;top:0}
-.brand{display:flex;align-items:center;gap:11px;font-family:'Space Grotesk';font-weight:700;letter-spacing:-.7px;font-size:19px}.brand-mark{width:36px;height:36px;border-radius:11px;background:var(--lime);color:#101b24;display:grid;place-items:center;font-weight:900;font-size:19px;transform:rotate(-5deg)}
-nav{display:flex;gap:26px}nav button,.nav-actions button{border:0;background:none;color:var(--muted);font-weight:600;font-size:13px}nav button:hover{color:var(--lime)}.nav-actions{display:flex;align-items:center;gap:12px}.btn{border:0;border-radius:999px;padding:12px 19px;font-weight:800;font-size:13px;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--lime);color:#14202a}.secondary{border:1px solid var(--line);background:#ffffff08;color:var(--ink)}
-main{position:relative;z-index:1}.hero{min-height:640px;padding:76px clamp(20px,7vw,100px) 64px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:35px;max-width:1500px;margin:auto;overflow:hidden}.eyebrow{color:var(--lime);font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;display:flex;align-items:center;gap:9px}.eyebrow:before{content:"";width:24px;height:2px;background:var(--pink)}h1,h2,h3,p{margin-top:0}h1{font-family:'Space Grotesk';font-size:clamp(54px,7.6vw,105px);line-height:.94;letter-spacing:-6px;margin:22px 0 24px;max-width:750px}h1 span{color:var(--lime);display:block;text-shadow:4px 4px 0 #ff5b9140}.hero-copy{color:#c1cbd2;line-height:1.75;font-size:17px;max-width:520px}.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.tiny-note{font-size:11px;color:#81909d;margin-top:17px}.visual{height:480px;position:relative;max-width:570px;width:100%;margin:auto}.photo{position:absolute;inset:18px 18px 18px 38px;border-radius:46% 46% 18px 18px;overflow:hidden;background:linear-gradient(145deg,#30485b,#111e2c)}.photo img{width:100%;height:100%;object-fit:cover;filter:saturate(1.12) contrast(1.08)}.photo:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#081421a8,transparent 60%)}.sticker{position:absolute;z-index:2;padding:13px 17px;border-radius:13px;color:#101820;font-family:'Space Grotesk';font-weight:800;box-shadow:5px 6px 0 #0005}.sticker.one{top:28px;right:-5px;background:var(--pink);transform:rotate(7deg)}.sticker.two{bottom:45px;left:0;background:var(--lime);transform:rotate(-7deg)}.circle{position:absolute;width:108px;height:108px;border:1px dashed var(--blue);border-radius:50%;right:-25px;bottom:60px;display:grid;place-items:center;color:var(--blue);font-size:10px;text-align:center;transform:rotate(13deg)}
-.section{padding:74px clamp(20px,7vw,100px);max-width:1500px;margin:auto}.section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:28px}.section h2{font-family:'Space Grotesk';font-size:clamp(32px,4vw,52px);letter-spacing:-2px;margin:10px 0}.muted{color:var(--muted);line-height:1.6}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:.2s}.card:hover{transform:translateY(-4px);border-color:#d5ff4566}.card-img{height:185px;position:relative;overflow:hidden}.card-img img{width:100%;height:100%;object-fit:cover;transition:.4s}.card:hover .card-img img{transform:scale(1.05)}.tag{position:absolute;top:13px;left:13px;background:var(--lime);color:#12202b;border-radius:999px;padding:6px 10px;font-size:10px;font-weight:900;text-transform:uppercase}.card-body{padding:18px}.card-body h3{font-family:'Space Grotesk';font-size:21px;margin-bottom:7px}.card-body p{color:var(--muted);font-size:13px;line-height:1.6;margin-bottom:0}
-.band{margin:35px clamp(20px,7vw,100px);padding:40px clamp(22px,5vw,65px);border-radius:24px;background:var(--lime);color:#13202a;display:flex;justify-content:space-between;align-items:center;gap:25px;position:relative;overflow:hidden}.band h2{font-family:'Space Grotesk';font-size:clamp(30px,4vw,48px);line-height:1;margin:0 0 9px;letter-spacing:-2px}.band p{margin:0;color:#30404a}.band .btn{background:#102131;color:white;white-space:nowrap}
-.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.feature{padding:23px;background:var(--panel);border:1px solid var(--line);border-radius:16px}.feature .emoji{font-size:25px}.feature h3{font-family:'Space Grotesk';margin:14px 0 7px}.feature p{color:var(--muted);font-size:13px;line-height:1.6;margin:0}
-footer{border-top:1px solid var(--line);padding:30px clamp(20px,7vw,100px);display:flex;justify-content:space-between;gap:15px;color:#83919d;font-size:12px}
-.modal{position:fixed;inset:0;background:#02070dc9;z-index:10;display:none;align-items:center;justify-content:center;padding:18px}.modal.open{display:flex}.dialog{background:#102033;border:1px solid var(--line);border-radius:22px;padding:28px;width:min(520px,100%);max-height:90vh;overflow:auto;box-shadow:0 25px 100px #0009}.dialog h2{font-family:'Space Grotesk';font-size:30px;letter-spacing:-1px;margin-bottom:8px}.dialog p{color:var(--muted);line-height:1.55;font-size:14px}.close{float:right;background:#ffffff12;border:0;color:white;border-radius:50%;width:32px;height:32px}.choices{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:18px 0}.choice{padding:13px;border:1px solid var(--line);background:#ffffff08;color:white;border-radius:12px;text-align:left}.choice.selected{border-color:var(--lime);background:#d5ff4516;color:var(--lime)}.field{width:100%;background:#081522;border:1px solid var(--line);padding:14px;border-radius:11px;color:white;margin:8px 0 14px;outline:none}.field:focus{border-color:var(--lime)}.wide{width:100%}.chatlog{height:210px;overflow:auto;background:#081522;border-radius:13px;padding:14px;margin:15px 0;font-size:13px;line-height:1.6}.bubble{padding:10px 12px;border-radius:12px;margin:7px 0;max-width:88%}.bot{background:#1a3045;color:#e9f1f5}.you{background:#d5ff45;color:#17232b;margin-left:auto}.chatrow{display:flex;gap:8px}.chatrow .field{margin:0}
-@media(max-width:800px){nav{display:none}.hero{grid-template-columns:1fr;padding-top:58px;gap:15px}.visual{height:370px;max-width:470px}.photo{inset:10px 15px 10px 25px}h1{letter-spacing:-3.5px}.cards,.feature-grid{grid-template-columns:1fr 1fr}.band{align-items:flex-start;flex-direction:column}.section-head{align-items:flex-start;flex-direction:column}}
-@media(max-width:520px){header{height:66px}.brand{font-size:17px}.nav-actions .secondary{display:none}.hero{min-height:auto;padding-top:48px}.hero-copy{font-size:15px}.visual{height:315px}.cards,.feature-grid{grid-template-columns:1fr}.card-img{height:200px}.section{padding-top:52px;padding-bottom:52px}footer{flex-direction:column}.circle{right:-8px;width:80px;height:80px}}
+:root{--ink:#f7f1e7;--muted:#b9b2a8;--night:#101012;--panel:#19191d;--panel2:#222126;--line:#39363a;--yellow:#f5ce36;--pink:#f05b83;--blue:#4bb8d1;--green:#b9e65a;--radius:18px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--night);color:var(--ink);font-family:"DM Sans",sans-serif}
+button,input{font:inherit}button{cursor:pointer}
+a{color:inherit;text-decoration:none}
+.topbar{position:sticky;top:0;z-index:30;background:#101012ed;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff18}
+.nav{max-width:1220px;margin:auto;padding:13px 22px;display:flex;align-items:center;gap:24px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:.4px;margin-right:auto}
+.mark{width:40px;height:40px;background:var(--yellow);color:#171515;border-radius:12px;display:grid;place-items:center;font-family:"Archivo Black";font-size:15px;transform:rotate(-5deg);box-shadow:3px 3px 0 var(--pink)}
+.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:1.6px;font-weight:700}
+.navlinks{display:flex;gap:24px;color:#d6d0c7;font-size:13px;font-weight:700}
+.navlinks a:hover{color:var(--yellow)}
+.navactions{display:flex;gap:9px}
+.btn{border:0;border-radius:999px;padding:12px 18px;font-weight:800;font-size:12px;letter-spacing:.3px;transition:.18s;display:inline-flex;align-items:center;justify-content:center;gap:8px}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.06)}
+.btn-yellow{background:var(--yellow);color:#171515;box-shadow:4px 4px 0 #a88719}
+.btn-outline{border:1px solid #ffffff65;background:#ffffff08;color:var(--ink)}
+.btn-pink{background:var(--pink);color:#160d12}
+.btn-small{padding:9px 13px;font-size:11px}
+.hero{max-width:1220px;margin:0 auto;padding:66px 22px 54px;display:grid;grid-template-columns:1fr 1.02fr;gap:50px;align-items:center}
+.eyebrow{font-family:"Permanent Marker";color:var(--green);font-size:14px;letter-spacing:1px;transform:rotate(-2deg);display:inline-block}
+.hero h1{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:clamp(48px,7vw,86px);line-height:.91;letter-spacing:-3px;margin:18px 0}
+.hero h1 span{color:var(--yellow);text-shadow:4px 4px 0 #6d5713}
+.hero p{max-width:490px;color:#c7c0b7;font-size:16px;line-height:1.7}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin:27px 0 15px}
+.micro{font-size:10px;color:#a9a19a;letter-spacing:1.2px;font-weight:700}
+.hero-art{position:relative;min-height:470px;border-radius:28px;overflow:hidden;border:1px solid #ffffff30;background:#282329}
+.hero-art img{width:100%;height:470px;object-fit:cover;display:block;filter:saturate(1.05) contrast(1.05)}
+.hero-art:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#101012d9,transparent 55%),linear-gradient(120deg,#15121a30,#f5ce3612)}
+.paint-tag{position:absolute;z-index:2;font-family:"Permanent Marker";font-size:clamp(26px,4vw,46px);line-height:.95;text-shadow:3px 4px #111;transform:rotate(-8deg)}
+.paint-tag.one{left:22px;top:25px;color:var(--yellow)}
+.paint-tag.two{right:22px;bottom:30px;color:#fff;transform:rotate(5deg);text-align:right}
+.sticker{position:absolute;z-index:3;right:20px;top:24px;background:var(--pink);color:#161216;padding:10px 14px;border-radius:10px;font-weight:900;font-size:10px;transform:rotate(7deg);box-shadow:3px 3px 0 #151515}
+.section{max-width:1220px;margin:auto;padding:46px 22px}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:22px}
+.section-head h2{font-family:"Archivo Black";font-size:clamp(28px,4vw,43px);text-transform:uppercase;margin:6px 0 0;line-height:1}
+.section-head p{color:var(--muted);max-width:420px;font-size:13px;line-height:1.6}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.place-card{position:relative;min-height:285px;border-radius:var(--radius);overflow:hidden;border:1px solid #ffffff25;background:var(--panel)}
+.place-card img{width:100%;height:285px;object-fit:cover;display:block;transition:transform .4s}
+.place-card:hover img{transform:scale(1.04)}
+.place-card:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#0d0d0ff2 0%,#0d0d0f08 75%)}
+.place-copy{position:absolute;z-index:2;bottom:18px;left:18px;right:18px}
+.place-copy small{color:var(--yellow);font-size:10px;font-weight:900;letter-spacing:1.5px}
+.place-copy h3{font-family:"Archivo Black";font-size:25px;text-transform:uppercase;margin:6px 0}
+.place-copy p{color:#ddd6cd;font-size:12px;margin:0}
+.section-dark{background:#17171b;border-top:1px solid #ffffff12;border-bottom:1px solid #ffffff12}
+.feature-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.feature{padding:22px;border:1px solid #ffffff1d;border-radius:16px;background:linear-gradient(145deg,#242329,#17171a)}
+.feature .emoji{font-size:27px}.feature h3{font-family:"Archivo Black";text-transform:uppercase;font-size:17px;margin:15px 0 8px}.feature p{font-size:12px;color:var(--muted);line-height:1.6;margin:0}
+.membership{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+.plus-card{background:linear-gradient(140deg,#2b2530,#17171a);border:1px solid #f5ce3660;border-radius:24px;padding:28px;position:relative;overflow:hidden}
+.plus-card:after{content:"PLUS";position:absolute;right:-8px;top:16px;font-family:"Archivo Black";font-size:76px;color:#ffffff08;transform:rotate(12deg)}
+.price{font-family:"Archivo Black";font-size:48px;color:var(--yellow)}
+.price span{font-family:"DM Sans";font-size:13px;color:var(--muted)}
+.checklist{padding:0;list-style:none;display:grid;gap:10px;color:#ded8cf;font-size:13px}
+.checklist li:before{content:"✓";color:var(--green);font-weight:900;margin-right:10px}
+.footer{border-top:1px solid #ffffff18;padding:32px 22px;color:var(--muted);font-size:11px}
+.footer-inner{max-width:1220px;margin:auto;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.app-shell{display:none;max-width:1220px;margin:0 auto;padding:32px 22px 90px}
+.app-shell.active{display:block}
+.app-header{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:25px}
+.app-title{font-family:"Archivo Black";font-size:34px;text-transform:uppercase}
+.app-title span{color:var(--yellow)}
+.app-layout{display:grid;grid-template-columns:220px 1fr;gap:20px}
+.side-nav{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:12px;height:max-content;position:sticky;top:86px}
+.side-nav button{display:flex;width:100%;padding:13px 12px;border:0;background:transparent;color:#cfc8bf;border-radius:11px;text-align:left;font-weight:800;font-size:12px;gap:10px}
+.side-nav button.active,.side-nav button:hover{background:#f5ce3618;color:var(--yellow)}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:22px;min-height:430px}
+.panel h2{font-family:"Archivo Black";font-size:29px;text-transform:uppercase;margin:0 0 8px}
+.muted{color:var(--muted);font-size:13px;line-height:1.6}
+.search{width:100%;background:#101012;border:1px solid var(--line);border-radius:12px;padding:14px;color:white;margin:15px 0}
+.pills{display:flex;flex-wrap:wrap;gap:9px;margin:14px 0}
+.pill{border:1px solid #5a5354;background:#242329;color:#eee;border-radius:999px;padding:9px 13px;font-size:11px;font-weight:800}
+.pill.selected{background:var(--yellow);color:#171515;border-color:var(--yellow)}
+.app-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:18px}
+.mini-card{background:#242329;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.mini-card img{width:100%;height:140px;object-fit:cover;display:block}
+.mini-card div{padding:13px}.mini-card b{font-family:"Archivo Black";text-transform:uppercase}.mini-card p{font-size:11px;color:var(--muted);margin:5px 0}
+.chatlog{display:grid;gap:12px;margin:18px 0;max-height:260px;overflow:auto}
+.bubble{padding:12px 14px;border-radius:14px;max-width:85%;font-size:13px;line-height:1.5;background:#29272e}
+.bubble.user{margin-left:auto;background:#3b3521;border:1px solid #8d7625}
+.chatrow{display:flex;gap:8px}.chatrow input{flex:1;min-width:0;background:#101012;border:1px solid var(--line);border-radius:12px;padding:13px;color:white}
+.empty{padding:35px 10px;text-align:center;color:var(--muted)}
+.modal-backdrop{display:none;position:fixed;inset:0;background:#000b;z-index:80;align-items:center;justify-content:center;padding:16px}
+.modal-backdrop.open{display:flex}
+.modal{width:min(540px,100%);max-height:90vh;overflow:auto;background:#1b1a1f;border:1px solid #ffffff35;border-radius:22px;padding:24px;box-shadow:0 30px 90px #000}
+.modal-top{display:flex;justify-content:space-between;align-items:center}
+.close{background:#333;color:white;border:0;border-radius:50%;width:34px;height:34px;font-size:20px}
+.modal h2{font-family:"Archivo Black";text-transform:uppercase;font-size:30px;line-height:1;margin:14px 0}
+.form-label{display:block;font-size:10px;font-weight:900;letter-spacing:1px;color:var(--yellow);margin:17px 0 7px}
+.modal input{width:100%;padding:13px;border:1px solid var(--line);background:#101012;color:white;border-radius:10px}
+.modal-note{font-size:11px;color:var(--muted);line-height:1.5}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%);z-index:100;background:var(--yellow);color:#171515;padding:12px 18px;border-radius:999px;font-weight:900;font-size:12px;display:none;box-shadow:0 6px 25px #0008}
+@media(max-width:800px){.nav{padding:11px 15px}.navlinks{display:none}.hero{grid-template-columns:1fr;padding-top:40px;gap:28px}.hero-art,.hero-art img{min-height:330px;height:330px}.cards{grid-template-columns:1fr 1fr}.feature-grid{grid-template-columns:1fr 1fr}.membership{grid-template-columns:1fr}.app-layout{grid-template-columns:1fr}.side-nav{position:static;display:flex;overflow:auto}.side-nav button{white-space:nowrap;width:auto}.panel{padding:17px}}
+@media(max-width:520px){.navactions .btn-outline{display:none}.hero h1{font-size:54px}.cards,.app-cards{grid-template-columns:1fr}.place-card,.place-card img{height:245px;min-height:245px}.feature-grid{grid-template-columns:1fr 1fr}.section{padding:35px 16px}.hero{padding-left:16px;padding-right:16px}.nav{padding-left:13px;padding-right:13px}.app-shell{padding:24px 13px 80px}.app-title{font-size:28px}.app-header .btn{padding:10px 12px}}
 </style>
 </head>
 <body>
-<div class="noise"></div>
-<header>
-  <div class="brand"><div class="brand-mark">NY</div> AI NEW YORK</div>
-  <nav><button onclick="scrollToId('discover')">Discover</button><button onclick="scrollToId('how')">How it works</button><button onclick="openModal('assistant')">Meet your New Yorker</button></nav>
-  <div class="nav-actions"><button class="secondary btn" onclick="openModal('signin')">Sign in</button><button class="primary btn" onclick="openModal('onboard')">Get started</button></div>
+<header class="topbar">
+  <div class="nav">
+    <a class="brand" href="#" onclick="showLanding();return false"><span class="mark">AI<br>NY</span><span>AI NEW YORK<small>YOUR NEW YORKER IN YOUR POCKET</small></span></a>
+    <nav class="navlinks"><a href="#discover">Discover</a><a href="#how">How it works</a><a href="#plus">AI NY Plus</a></nav>
+    <div class="navactions"><button class="btn btn-outline btn-small" onclick="openModal('signin')">SIGN IN</button><button class="btn btn-yellow btn-small" onclick="openModal('onboard')">GET STARTED ↗</button></div>
+  </div>
 </header>
-<main>
+
+<main id="landing">
 <section class="hero">
- <div>
-  <div class="eyebrow">The city is yours to discover</div>
-  <h1>FIND YOUR<br><span>NEW YORK.</span></h1>
-  <p class="hero-copy">A New Yorker in your pocket. Discover the spots, people, experiences, and little corners of the city that feel like they were waiting for you.</p>
-  <div class="hero-buttons"><button class="btn primary" onclick="openModal('onboard')">Get started <span>↗</span></button><button class="btn secondary" onclick="openModal('guest')">Continue as guest</button></div>
-  <div class="tiny-note">YOUR CITY. YOUR PACE. YOUR STORY.</div>
- </div>
- <div class="visual">
-  <div class="photo"><img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=1200&q=85" alt="New York City street and skyline"></div>
-  <div class="sticker one">ONLY IN NYC ✳</div><div class="sticker two">MAKE THE CITY YOURS.</div><div class="circle">5 BOROUGHS<br>INFINITE<br>POSSIBILITIES</div>
- </div>
+  <div>
+    <span class="eyebrow">THE CITY IS YOURS. GO FIND YOUR NEW YORK.</span>
+    <h1>FIND YOUR<br><span>NEW YORK.</span></h1>
+    <p>A New Yorker in your pocket. Discover the spots, people, experiences, and corners of the city that feel like they were waiting for you.</p>
+    <div class="hero-buttons"><button class="btn btn-yellow" onclick="openModal('onboard')">GET STARTED ↗</button><button class="btn btn-outline" onclick="enterGuest()">CONTINUE AS GUEST</button></div>
+    <div class="micro">BUILT FOR LOCALS. VISITORS. EVERYBODY IN BETWEEN.</div>
+  </div>
+  <div class="hero-art">
+    <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=1400&q=85" alt="New York City skyline at dusk">
+    <div class="paint-tag one">AI NY<br>BUILT<br>DIFFERENT.</div><div class="sticker">ONLY IN NYC ✦</div><div class="paint-tag two">YOUR CITY.<br>YOUR STORY.</div>
+  </div>
 </section>
 <section class="section" id="discover">
- <div class="section-head"><div><div class="eyebrow">Not just the tourist version</div><h2>There's a New York<br>with your name on it.</h2></div><p class="muted" style="max-width:390px">From the block around the corner to a night you didn't plan. Start with what you're into. We'll help you find what fits.</p></div>
- <div class="cards">
-  <article class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80" alt="New York skyline at dusk"><span class="tag">The classics</span></div><div class="card-body"><h3>See the icons</h3><p>Find the landmarks, views, and timeless New York moments worth experiencing.</p></div></article>
-  <article class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=900&q=80" alt="Neighborhood cafe"><span class="tag" style="background:var(--pink)">Local finds</span></div><div class="card-body"><h3>Go off the map</h3><p>Explore neighborhood favorites, creative spaces, independent shops, and hidden gems.</p></div></article>
-  <article class="card"><div class="card-img"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80" alt="Live music event"><span class="tag" style="background:var(--blue)">Your scene</span></div><div class="card-body"><h3>Find your people</h3><p>Follow your interests into music, art, food, film, nightlife, and new experiences.</p></div></article>
- </div>
+  <div class="section-head"><div><span class="eyebrow">DON'T JUST VISIT. GET INTO IT.</span><h2>THE CITY HAS<br>LAYERS.</h2></div><p>From the block you never noticed to the view everybody talks about. Find places that match your kind of New York.</p></div>
+  <div class="cards">
+    <article class="place-card"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80" alt="Manhattan skyline"><div class="place-copy"><small>THE CLASSIC VIEW</small><h3>MANHATTAN AFTER DARK</h3><p>City lights, late nights, endless possibilities.</p></div></article>
+    <article class="place-card"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=80" alt="New York city rooftops"><div class="place-copy"><small>NEIGHBORHOOD ENERGY</small><h3>FIND YOUR BLOCK</h3><p>Explore the character of every borough.</p></div></article>
+    <article class="place-card"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=900&q=80" alt="Live music crowd"><div class="place-copy"><small>WHAT'S HAPPENING</small><h3>MAKE A NIGHT OF IT</h3><p>Music, art, food, and experiences.</p></div></article>
+  </div>
 </section>
-<div class="band"><div><h2>New here? Good.<br>Let's make it yours.</h2><p>A few questions help us get to know your kind of New York.</p></div><button class="btn" onclick="openModal('onboard')">Start your journey ↗</button></div>
-<section class="section" id="how">
- <div class="eyebrow">A city that gets more personal</div><h2>More than recommendations.</h2>
- <div class="feature-grid">
-  <div class="feature"><div class="emoji">🗽</div><h3>Get to know you</h3><p>Tell us what you're curious about. Your interests shape the experience.</p></div>
-  <div class="feature"><div class="emoji">💬</div><h3>Your AI New Yorker</h3><p>Ask questions, brainstorm plans, and get ideas in a conversational way.</p></div>
-  <div class="feature"><div class="emoji">🧭</div><h3>Make your way</h3><p>Build a day around your mood, neighborhood, and the places you want to see.</p></div>
- </div>
+<section class="section section-dark" id="how">
+  <div class="section-head"><div><span class="eyebrow">MORE THAN A MAP.</span><h2>YOUR NEW YORK.<br>YOUR WAY.</h2></div><p>AI NY learns what you're into and helps turn that into real-world discoveries. You stay in control of where the day takes you.</p></div>
+  <div class="feature-grid">
+    <div class="feature"><div class="emoji">📍</div><h3>EXPLORE</h3><p>Find neighborhoods, local favorites, and hidden gems across the five boroughs.</p></div>
+    <div class="feature"><div class="emoji">✦</div><h3>ASK AI NY</h3><p>Get ideas and guidance from your own NYC-minded assistant.</p></div>
+    <div class="feature"><div class="emoji">🗺️</div><h3>MAKE A PLAN</h3><p>Build a day around your interests, pace, and the places you want to see.</p></div>
+    <div class="feature"><div class="emoji">♥</div><h3>SAVE YOUR SPOTS</h3><p>Keep a personal collection of places you want to revisit.</p></div>
+  </div>
+</section>
+<section class="section" id="plus">
+  <div class="membership">
+    <div><span class="eyebrow">MORE CITY. MORE PERSONAL.</span><h2 style="font-family:'Archivo Black';font-size:clamp(34px,5vw,56px);line-height:.98;text-transform:uppercase;margin:12px 0">MEET<br>AI NY <span style="color:var(--yellow)">PLUS.</span></h2><p class="muted">Start free. Upgrade when you're ready for a deeper, more personalized New York experience.</p><button class="btn btn-yellow" onclick="openModal('plus')">EXPLORE PLUS ↗</button></div>
+    <div class="plus-card"><div class="eyebrow">COMING PREMIUM</div><div class="price">$5.99 <span>/ month · planned launch price</span></div><ul class="checklist"><li>Expanded AI NY conversations</li><li>More personalized day plans</li><li>Advanced recommendations</li><li>More saved collections and planning tools</li></ul><p class="modal-note">No payment is collected on this preview website. Membership checkout will be connected before paid launch.</p></div>
+  </div>
 </section>
 </main>
-<footer><div class="brand"><div class="brand-mark">NY</div> AI NEW YORK</div><div>YOUR NEW YORKER IN YOUR POCKET.</div><div>© 2026 AI New York · Made for the city</div></footer>
 
-<div class="modal" id="onboard"><div class="dialog"><button class="close" onclick="closeModal('onboard')">×</button><div class="eyebrow">Let's get acquainted</div><h2 id="questionTitle">What's your New York?</h2><p id="questionDesc">What are you most excited to explore?</p><div class="choices" id="choices"></div><button class="btn primary wide" id="nextBtn" onclick="nextQuestion()">Continue →</button><p class="tiny-note" id="stepNote">STEP 1 OF 3 · YOU CAN CHANGE THIS LATER</p></div></div>
-<div class="modal" id="guest"><div class="dialog"><button class="close" onclick="closeModal('guest')">×</button><div class="eyebrow">Come on in</div><h2>Welcome to New York.</h2><p>You're exploring as a guest. You can look around and try the experience. Your choices won't be saved between visits yet.</p><button class="btn primary wide" onclick="closeModal('guest');openModal('assistant')">Meet your AI New Yorker →</button></div></div>
-<div class="modal" id="signin"><div class="dialog"><button class="close" onclick="closeModal('signin')">×</button><div class="eyebrow">Good to see you</div><h2>Welcome back.</h2><p>Account sign-in is coming in the next build. For now, explore the guest experience.</p><button class="btn primary wide" onclick="closeModal('signin');openModal('guest')">Continue as guest</button></div></div>
-<div class="modal" id="assistant"><div class="dialog"><button class="close" onclick="closeModal('assistant')">×</button><div class="eyebrow">Your New Yorker in your pocket</div><h2>What's on your mind?</h2><p>This is an early preview of the assistant experience. Live AI connection will be added in a later build.</p><div class="chatlog" id="chatlog"><div class="bubble bot">Yo! Welcome to New York. What are you in the mood to discover — food, art, music, film, or just a new corner of the city?</div></div><div class="chatrow"><input class="field" id="chatInput" placeholder="Ask your New Yorker..." onkeydown="if(event.key==='Enter')sendChat()"><button class="btn primary" onclick="sendChat()">Send</button></div></div></div>
+<section class="app-shell" id="app">
+  <div class="app-header"><div><div class="eyebrow">WELCOME TO YOUR NEW YORK</div><div class="app-title">AI <span>NY</span> / <span id="viewName">HOME</span></div></div><button class="btn btn-outline btn-small" onclick="showLanding()">← BACK TO SITE</button></div>
+  <div class="app-layout">
+    <aside class="side-nav">
+      <button class="active" data-view="home" onclick="switchView('home',this)">⌂ HOME</button>
+      <button data-view="explore" onclick="switchView('explore',this)">⌕ EXPLORE</button>
+      <button data-view="chat" onclick="switchView('chat',this)">✦ AI NY</button>
+      <button data-view="saved" onclick="switchView('saved',this)">♥ SAVED</button>
+      <button data-view="profile" onclick="switchView('profile',this)">◎ PROFILE</button>
+    </aside>
+    <div class="panel" id="appPanel"></div>
+  </div>
+</section>
+
+<footer class="footer"><div class="footer-inner"><span>© 2026 AI NEW YORK · YOUR NEW YORKER IN YOUR POCKET.</span><span>Made with NYC in mind. Paid features are planned, not yet active.</span></div></footer>
+
+<div class="modal-backdrop" id="modal">
+  <div class="modal"><div class="modal-top"><span class="eyebrow">AI NY · YOUR CITY, YOUR STORY</span><button class="close" onclick="closeModal()">×</button></div><div id="modalContent"></div></div>
+</div>
+<div class="toast" id="toast"></div>
 <script>
-const questions=[
- {title:"What's your New York?",desc:"What are you most excited to explore?",opts:["Food & hidden gems","Music & nightlife","Art, film & culture","Parks & the outdoors","History & landmarks","A little bit of everything"]},
- {title:"How do you like to explore?",desc:"What's your natural city rhythm?",opts:["Walking and wandering","Public transit adventures","Biking around","Planned-out days","Spontaneous discoveries"]},
- {title:"What's the vibe today?",desc:"What kind of experience sounds right?",opts:["Low-key & relaxed","Creative & inspiring","Social & energetic","Affordable & accessible","Surprise me"]}
-];
-let q=0,answers=[];
-function openModal(id){document.getElementById(id).classList.add('open');if(id==='onboard')renderQuestion()}
-function closeModal(id){document.getElementById(id).classList.remove('open')}
-function scrollToId(id){document.getElementById(id).scrollIntoView({behavior:'smooth'})}
-function renderQuestion(){let item=questions[q];document.getElementById('questionTitle').textContent=item.title;document.getElementById('questionDesc').textContent=item.desc;document.getElementById('stepNote').textContent=`STEP ${q+1} OF ${questions.length} · YOU CAN CHANGE THIS LATER`;document.getElementById('nextBtn').textContent=q===questions.length-1?'See my experience →':'Continue →';document.getElementById('choices').innerHTML=item.opts.map((o,i)=>`<button class="choice ${answers[q]===o?'selected':''}" onclick="selectChoice(${i})">${o}</button>`).join('')}
-function selectChoice(i){answers[q]=questions[q].opts[i];renderQuestion()}
-function nextQuestion(){if(!answers[q]){document.getElementById('choices').firstElementChild?.click();return}if(q<questions.length-1){q++;renderQuestion()}else{closeModal('onboard');alert('Your starter preferences: '+answers.join(' · ')+'. In the next build, these will personalize your AI New York profile.');q=0}}
-function sendChat(){let input=document.getElementById('chatInput'),v=input.value.trim();if(!v)return;let log=document.getElementById('chatlog');log.innerHTML+=`<div class="bubble you">${escapeHtml(v)}</div><div class="bubble bot">I'm still getting my local knowledge and live AI connection set up. For now, try exploring the Discover section — we'll make this conversation truly personal in the next build.</div>`;input.value='';log.scrollTop=log.scrollHeight}
-function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+const state={interests:[],vibe:"",name:"",saved:JSON.parse(localStorage.getItem("ainy-saved")||"[]"),view:"home"};
+const $=s=>document.querySelector(s);
+function toast(msg){const t=$("#toast");t.textContent=msg;t.style.display="block";setTimeout(()=>t.style.display="none",2600)}
+function openModal(which){
+ const box=$("#modalContent");
+ if(which==="onboard"){box.innerHTML=`<h2>WHAT'S YOUR<br><span style="color:var(--yellow)">VIBE?</span></h2><p class="muted">Let's start shaping your New York.</p><label class="form-label">WHAT BRINGS YOU TO NYC?</label><div class="pills">${["I'M A LOCAL","I'M VISITING","BOTH"].map(x=>`<button class="pill ${state.vibe===x?"selected":""}" onclick="state.vibe='${x}';this.parentElement.querySelectorAll('.pill').forEach(b=>b.classList.remove('selected'));this.classList.add('selected')">${x}</button>`).join("")}</div><label class="form-label">WHAT ARE YOU INTO?</label><div class="pills">${["FOOD","ART & CULTURE","MUSIC","NIGHTLIFE","SHOPPING","OUTDOORS","HISTORY","FITNESS","HIDDEN GEMS"].map(x=>`<button class="pill ${state.interests.includes(x)?"selected":""}" onclick="toggleInterest('${x}',this)">${x}</button>`).join("")}</div><label class="form-label">WHAT SHOULD WE CALL YOU?</label><input id="onboardName" placeholder="Your first name" value="${state.name}"><p class="modal-note">Your selections are saved in this browser for this prototype. Account sync will come later.</p><button class="btn btn-yellow" style="width:100%;margin-top:15px" onclick="finishOnboard()">LET'S GO ↗</button>`}
+ else if(which==="signin"){box.innerHTML=`<h2>WELCOME<br>BACK.</h2><p class="muted">Sign-in is a preview right now. Real accounts will be connected in a later build.</p><label class="form-label">EMAIL</label><input placeholder="you@example.com"><label class="form-label">PASSWORD</label><input type="password" placeholder="Password"><button class="btn btn-yellow" style="width:100%;margin-top:18px" onclick="toast('Account sign-in is not connected yet.');closeModal()">CONTINUE</button>`}
+ else {box.innerHTML=`<h2>AI NY<br><span style="color:var(--yellow)">PLUS.</span></h2><div class="price">$5.99 <span>/ month · planned</span></div><p class="muted">Premium membership is part of the roadmap. We're building expanded AI conversations, richer itineraries, and advanced recommendations first.</p><button class="btn btn-yellow" style="width:100%" onclick="toast('Plus membership is not accepting payments yet.');closeModal()">JOIN THE EARLY ACCESS LIST</button><p class="modal-note">No payment will be taken. This is a preview, not a live subscription.</p>`}
+ $("#modal").classList.add("open");
+}
+function closeModal(){$("#modal").classList.remove("open")}
+function toggleInterest(x,b){if(state.interests.includes(x)){state.interests=state.interests.filter(v=>v!==x);b.classList.remove("selected")}else{state.interests.push(x);b.classList.add("selected")}}
+function finishOnboard(){state.name=$("#onboardName").value.trim()||"New Yorker";localStorage.setItem("ainy-profile",JSON.stringify({name:state.name,vibe:state.vibe,interests:state.interests}));closeModal();enterGuest();toast("Your AI NY preview is ready, "+state.name+"!")}
+function enterGuest(){showApp();switchView("home",document.querySelector('[data-view="home"]'))}
+function showApp(){$("#landing").style.display="none";$("#app").classList.add("active");window.scrollTo(0,0)}
+function showLanding(){$("#landing").style.display="block";$("#app").classList.remove("active");window.scrollTo(0,0)}
+function switchView(view,button){state.view=view;document.querySelectorAll(".side-nav button").forEach(b=>b.classList.toggle("active",b.dataset.view===view));$("#viewName").textContent=view.toUpperCase();renderView()}
+function renderView(){
+ const profile=JSON.parse(localStorage.getItem("ainy-profile")||"{}");const name=profile.name||"New Yorker";const interests=profile.interests||[];
+ const panel=$("#appPanel");
+ if(state.view==="home"){panel.innerHTML=`<div class="eyebrow">YOUR NYC STARTS HERE</div><h2>YO, ${name.toUpperCase()}.</h2><p class="muted">Ready to find your New York? Here's a starting point. Recommendations are sample content in this preview.</p><input class="search" placeholder="Ask AI NY anything or search a neighborhood..." onclick="switchView('chat',document.querySelector('[data-view=chat]'))" readonly><div class="app-cards"><div class="mini-card"><img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=700&q=80"><div><b>Sunset in DUMBO</b><p>Views · Photos · Brooklyn</p><button class="btn btn-small btn-yellow" onclick="savePlace('Sunset in DUMBO')">SAVE SPOT ♥</button></div></div><div class="mini-card"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=700&q=80"><div><b>Find your next night</b><p>Music · Culture · Experiences</p><button class="btn btn-small btn-outline" onclick="switchView('explore',document.querySelector('[data-view=explore]'))">EXPLORE →</button></div></div></div><p class="muted" style="margin-top:18px">Your interests: ${interests.length?interests.join(" · "):"Add your interests to personalize your experience."}</p>`}
+ if(state.view==="explore"){panel.innerHTML=`<div class="eyebrow">FIVE BOROUGHS. INFINITE STORIES.</div><h2>EXPLORE NEW YORK.</h2><p class="muted">Search neighborhoods and browse starter categories. Live place listings and maps will be connected in a later phase.</p><input class="search" id="placeSearch" placeholder="Search places, neighborhoods..."><div class="pills">${["BROOKLYN","MANHATTAN","QUEENS","BRONX","STATEN ISLAND","HIDDEN GEMS"].map(x=>`<button class="pill" onclick="document.querySelector('#placeSearch').value='${x}'">${x}</button>`).join("")}</div><div class="app-cards"><div class="mini-card"><img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&w=700&q=80"><div><b>DUMBO</b><p>Waterfront views and city energy.</p><button class="btn btn-small btn-yellow" onclick="savePlace('DUMBO')">SAVE ♥</button></div></div><div class="mini-card"><img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=80"><div><b>LOWER MANHATTAN</b><p>Landmarks, food, and late-night walks.</p><button class="btn btn-small btn-yellow" onclick="savePlace('Lower Manhattan')">SAVE ♥</button></div></div></div>`}
+ if(state.view==="chat"){panel.innerHTML=`<div class="eyebrow">YOUR NYC-MINDED SIDEKICK</div><h2>ASK AI NY.</h2><p class="muted">Try the assistant preview. Responses below are scripted examples, not live AI answers yet.</p><div class="chatlog" id="chatlog"><div class="bubble">Yo! What's the move? Tell me what kind of New York you're looking for.</div></div><div class="chatrow"><input id="chatInput" placeholder="Ask about food, art, neighborhoods..." onkeydown="if(event.key==='Enter')sendChat()"><button class="btn btn-yellow" onclick="sendChat()">SEND ↗</button></div>`}
+ if(state.view==="saved"){panel.innerHTML=`<div class="eyebrow">KEEP YOUR FAVORITES CLOSE</div><h2>SAVED PLACES.</h2><p class="muted">Your saved spots are stored on this device in this prototype.</p>${state.saved.length?state.saved.map(x=>`<div class="listrow" style="padding:14px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between"><b>${x}</b><button class="pill" onclick="removePlace('${x.replace(/'/g,"\\'")}')">REMOVE</button></div>`).join(""):`<div class="empty">No saved places yet.<br>Explore the city and save a spot.</div>`}`}
+ if(state.view==="profile"){panel.innerHTML=`<div class="eyebrow">YOUR NEW YORK PROFILE</div><h2>${name.toUpperCase()}.</h2><p class="muted">Your profile helps AI NY shape recommendations around what you enjoy.</p><div class="feature" style="margin:16px 0"><b>YOUR VIBE</b><p>${profile.vibe||"Not set yet"}</p><b>YOUR INTERESTS</b><p>${interests.length?interests.join(" · "):"Not set yet"}</p></div><button class="btn btn-yellow" onclick="openModal('onboard')">EDIT PREFERENCES</button><button class="btn btn-outline" style="margin-left:8px" onclick="openModal('plus')">AI NY PLUS · $5.99</button><p class="modal-note" style="margin-top:18px">Profile data is currently saved in this browser only. Secure accounts and cloud sync are not connected yet.</p>`}
+}
+function savePlace(x){if(!state.saved.includes(x)){state.saved.push(x);localStorage.setItem("ainy-saved",JSON.stringify(state.saved));toast(x+" saved.")}else toast("Already saved.");}
+function removePlace(x){state.saved=state.saved.filter(v=>v!==x);localStorage.setItem("ainy-saved",JSON.stringify(state.saved));renderView()}
+function sendChat(){const input=$("#chatInput");if(!input||!input.value.trim())return;const q=input.value.trim();const log=$("#chatlog");log.innerHTML+=`<div class="bubble user">${q.replace(/[<>&]/g,c=>({"<":"&lt;",">":"&gt;","&":"&amp;"}[c]))}</div><div class="bubble">I got you. AI NY's live local recommendations are coming in the next build. For now, tell me your borough, budget, and vibe and we'll shape the idea.</div>`;input.value="";log.scrollTop=log.scrollHeight}
+$("#modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
+renderView();
 </script>
-</body></html>
+</body>
+</html>
