@@ -33,49 +33,49 @@
 .split{display:grid;grid-template-columns:70% 30%;gap:10px}.strip img{width:100%;height:80px;object-fit:cover;display:block;margin-bottom:8px;cursor:pointer}
 .nav{position:fixed;bottom:0;left:0;right:0;background:#000;border-top:2px solid #FFE600;display:flex;justify-content:space-around;padding:10px 0;font-size:12px;font-weight:900}.nav .a{color:#FFE600}body{padding-bottom:60px}
 @media(max-width:700px){.grid5{grid-template-columns:repeat(2,1fr)}.grid4{grid-template-columns:repeat(2,1fr)}.grad{grid-template-columns:1fr}.split{grid-template-columns:1fr}.hero h1{font-size:32px}}
-</style></head><body>
+</style></head><body style="touch-action: manipulation;">
 <div class="top"><div><b>AI NY</b> NEW YORK • IN YOUR POCKET</div><div class="r"><span>0 SAVED</span><span>+ PLAN</span></div></div>
 <div class="ticker">NOW VIEWING: HOME • TAPS 0 • Welcome — tap any photo, prompt, or borough to start your New York.</div>
-<div class="hero"><img id="heroImg" src="/images/IMG_7249.jpeg" alt="Yellow taxi mural"><div class="ov"><div>● LIVE • NYC &nbsp; AI NY V8</div><h1>FIND YOUR<br>NEW YORK</h1><p>Yellow taxi mural, Midtown — tap a photo below to swap the hero</p><div><button class="btn y">BUILD MY PLAN → • TAPS 0</button><button class="btn w">EXPLORE BOROUGHS • TAPS 0</button></div></div></div>
-<div class="ask"><h3>ASK AI NY</h3><div style="display:flex;gap:8px;margin-top:8px"><input placeholder="Ask about tonight, food, a walk..."><button class="btn y" style="background:#FF2D95;color:#fff">ASK • 0</button></div><div class="chips"><span>Hungry in Bushwick $20</span><span>First time 1 day</span><span>Late night jazz?</span><span>Rainy day</span><span>Date night</span><span>Cheap eats</span><span>Free today</span><span>Best photo spot</span></div><div style="font-size:11px;color:#aaa;margin-top:6px">TAPS 0 • 8 WAYS IN</div></div>
+<div class="hero"><img id="heroImg" src="/images/IMG_7249.jpeg" alt="Yellow taxi mural"><div class="ov"><div>● LIVE • NYC &nbsp; AI NY V8</div><h1>FIND YOUR<br>NEW YORK</h1><p>Yellow taxi mural, Midtown — tap a photo below to swap the hero</p><div><button id="buildPlanBtn" class="btn y">BUILD MY PLAN →</button><button id="exploreBtn" class="btn w">EXPLORE BOROUGHS</button></div></div></div>
+<div class="ask"><h3>ASK AI NY</h3><div style="display:flex;gap:8px;margin-top:8px"><input id="askInput" placeholder="Ask about tonight, food, a walk..."><button id="askBtn" class="btn y" style="background:#FF2D95;color:#fff">ASK • 0</button></div><div class="chips" id="chips"><span style="cursor: pointer;">Hungry in Bushwick $20</span><span style="cursor: pointer;">First time 1 day</span><span style="cursor: pointer;">Late night jazz?</span><span style="cursor: pointer;">Rainy day</span><span style="cursor: pointer;">Date night</span><span style="cursor: pointer;">Cheap eats</span><span style="cursor: pointer;">Free today</span><span style="cursor: pointer;">Best photo spot</span></div><div style="font-size:11px;color:#aaa;margin-top:6px">TAPS 0 • 8 WAYS IN</div><div id="askResults" style="margin-top:12px"></div></div>
 
-<div class="sec"><h2>BOROUGHS ON DECK</h2><div class="grid5">
-<div class="card"><img src="/images/IMG_7249.jpeg"><p><b>MANHATTAN</b><br><small>Yellow taxi mural, Midtown</small></p></div>
-<div class="card"><img src="/images/IMG_7389.jpeg"><p><b>BROOKLYN</b><br><small>Sunset waterfront, Brooklyn</small></p></div>
-<div class="card"><img src="https://i.pinimg.com/736x/1d/10/c7/1d10c7fe8c9644e3232f6074aebf1651--train-from-flushing-queens.jpg"><p><b>QUEENS</b><br><small>7 train on elevated tracks, Queens</small></p></div>
-<div class="card"><img src="https://www.yardbarker.com/media/a/9/a9d41c0dc15a800a6a5a3d5ea7638d3729118890/thumb_16x9/10695862.jpg"><p><b>BRONX</b><br><small>Yankee Stadium, Bronx</small></p></div>
-<div class="card"><img src="/images/STATEN_FERRY_2.jpeg"><p><b>STATEN ISLAND</b><br><small>Staten Ferry deck, empty deck, orange railing</small></p></div>
+<div class="sec" id="sec-explore"><h2>BOROUGHS ON DECK</h2><div class="grid5">
+<div class="card" style="cursor: pointer;"><img src="/images/IMG_7249.jpeg"><p><b>MANHATTAN</b><br><small>Yellow taxi mural, Midtown</small></p></div>
+<div class="card" style="cursor: pointer;"><img src="/images/IMG_7389.jpeg"><p><b>BROOKLYN</b><br><small>Sunset waterfront, Brooklyn</small></p></div>
+<div class="card" style="cursor: pointer;"><img src="https://i.pinimg.com/736x/1d/10/c7/1d10c7fe8c9644e3232f6074aebf1651--train-from-flushing-queens.jpg"><p><b>QUEENS</b><br><small>7 train on elevated tracks, Queens</small></p></div>
+<div class="card" style="cursor: pointer;"><img src="https://www.yardbarker.com/media/a/9/a9d41c0dc15a800a6a5a3d5ea7638d3729118890/thumb_16x9/10695862.jpg"><p><b>BRONX</b><br><small>Yankee Stadium, Bronx</small></p></div>
+<div class="card" style="cursor: pointer;"><img src="/images/STATEN_FERRY_2.jpeg"><p><b>STATEN ISLAND</b><br><small>Staten Ferry deck, empty deck, orange railing</small></p></div>
 </div></div>
 
 <div class="sec"><h2>EVERY BLOCK DIFFERENT</h2><div class="grid4">
-<div class="card"><img src="/images/IMG_1078.jpeg"><p><b>URBAN</b><br><small>Train track pic</small></p></div>
-<div class="card"><img src="/images/IMG_0244.jpeg"><p><b>COBBLESTONE</b><br><small>Brooklyn Bridge pic</small></p></div>
-<div class="card"><img src="/images/GRAFFITI_SKULL.jpeg"><p><b>GRAFFITI</b><br><small>Colorful skull graffiti - your graffiti photo</small></p></div>
-<div class="card"><img src="/images/IMG_0274.jpeg"><p><b>STREET LIFE</b></p></div>
+<div class="card" style="cursor: pointer;"><img src="/images/IMG_1078.jpeg"><p><b>URBAN</b><br><small>Train track pic</small></p></div>
+<div class="card" style="cursor: pointer;"><img src="/images/IMG_0244.jpeg"><p><b>COBBLESTONE</b><br><small>Brooklyn Bridge pic</small></p></div>
+<div class="card" style="cursor: pointer;"><img src="/images/GRAFFITI_SKULL.jpeg"><p><b>GRAFFITI</b><br><small>Colorful skull graffiti - your graffiti photo</small></p></div>
+<div class="card" style="cursor: pointer;"><img src="/images/IMG_0274.jpeg"><p><b>STREET LIFE</b></p></div>
 </div></div>
 
-<div class="sec"><h2>THE CITY HAS LAYERS</h2><div class="grad">
-<div class="g" style="background:linear-gradient(135deg,#FF2D95,#FF7A00,#FFE600)"><img src="/images/PIZZA.jpeg" style="width:100%;height:140px;object-fit:cover;display:block;border-radius:8px"><br>EAT<small>Your pizza slice</small></div>
-<div class="g" style="background:linear-gradient(135deg,#3A86FF,#00C2A8,#FFE600)"><img src="/images/BASQUIAT_SEE.jpeg" style="width:100%;height:140px;object-fit:cover;display:block;border-radius:8px"><br>SEE<small>Basquiat mural</small></div>
-<div class="g" style="background:linear-gradient(135deg,#FFE600,#A8FF00)"><img src="/images/FEEL.jpeg" style="width:100%;height:140px;object-fit:cover;display:block;border-radius:8px"><br>FEEL<small>Sunset street - golden hour</small></div>
+<div class="sec" id="sec-layers"><h2>THE CITY HAS LAYERS</h2><div class="grad">
+<div class="g" style="background: linear-gradient(135deg, rgb(255, 45, 149), rgb(255, 122, 0), rgb(255, 230, 0)); cursor: pointer;"><img src="/images/PIZZA.jpeg" style="width:100%;height:140px;object-fit:cover;display:block;border-radius:8px"><br>EAT<small>Your pizza slice</small></div>
+<div class="g" style="background: linear-gradient(135deg, rgb(58, 134, 255), rgb(0, 194, 168), rgb(255, 230, 0)); cursor: pointer;"><img src="/images/BASQUIAT_SEE.jpeg" style="width:100%;height:140px;object-fit:cover;display:block;border-radius:8px"><br>SEE<small>Basquiat mural</small></div>
+<div class="g" style="background: linear-gradient(135deg, rgb(255, 230, 0), rgb(168, 255, 0)); cursor: pointer;"><img src="/images/FEEL.jpeg" style="width:100%;height:140px;object-fit:cover;display:block;border-radius:8px"><br>FEEL<small>Sunset street - golden hour</small></div>
 </div></div>
 
-<div class="sec"><h2>TONIGHT IN NEW YORK</h2><div class="grad">
-<div class="g" style="background:#111;padding:0;overflow:hidden"><img src="/images/ROOFTOP_NIGHT.jpeg" style="width:100%;height:140px;object-fit:cover;display:block"><div style="padding:10px;color:#fff">Rooftop<small style="display:block;color:#aaa">Night rooftop - Empire State lit up</small></div></div>
-<div class="g" style="background:#111;padding:0;overflow:hidden"><img src="https://restaurant-showcase-builds.netlify.app/restaurants/ramen-bar-kazoku/images/ramen-hero.jpg" style="width:100%;height:140px;object-fit:cover;display:block"><div style="padding:10px;color:#fff">Noodle<small style="display:block;color:#aaa">Ramen bowl - NYC ramen shop</small></div></div>
-<div class="g" style="background:#111;padding:0;overflow:hidden"><img src="/images/IMG_0274.jpeg" style="width:100%;height:140px;object-fit:cover;display:block"><div style="padding:10px;color:#fff">Jazz<small style="display:block;color:#aaa">Apollo Theater - moved from Street Life</small></div></div>
+<div class="sec" id="sec-tonight"><h2>TONIGHT IN NEW YORK</h2><div class="grad">
+<div class="g" style="background: rgb(17, 17, 17); padding: 0px; overflow: hidden; cursor: pointer;"><img src="/images/ROOFTOP_NIGHT.jpeg" style="width:100%;height:140px;object-fit:cover;display:block"><div style="padding:10px;color:#fff">Rooftop<small style="display:block;color:#aaa">Night rooftop - Empire State lit up</small></div></div>
+<div class="g" style="background: rgb(17, 17, 17); padding: 0px; overflow: hidden; cursor: pointer;"><img src="https://restaurant-showcase-builds.netlify.app/restaurants/ramen-bar-kazoku/images/ramen-hero.jpg" style="width:100%;height:140px;object-fit:cover;display:block"><div style="padding:10px;color:#fff">Noodle<small style="display:block;color:#aaa">Ramen bowl - NYC ramen shop</small></div></div>
+<div class="g" style="background: rgb(17, 17, 17); padding: 0px; overflow: hidden; cursor: pointer;"><img src="/images/IMG_0274.jpeg" style="width:100%;height:140px;object-fit:cover;display:block"><div style="padding:10px;color:#fff">Jazz<small style="display:block;color:#aaa">Apollo Theater - moved from Street Life</small></div></div>
 </div></div>
 
 <div class="sec"><h2>YOUR NEW YORK YOUR WAY</h2><div class="split">
 <div><div class="grid4" style="grid-template-columns:repeat(3,1fr)">
-<div class="card"><img src="/images/IMG_1176.jpeg"><p>FOR YOU 1</p></div>
-<div class="card"><img src="/images/IMG_1143.jpeg"><p>FOR YOU 2</p></div>
-<div class="card"><img src="/images/IMG_0359.jpeg"><p>FOR YOU 3</p></div>
+<div class="card" style="cursor: pointer;"><img src="/images/IMG_1176.jpeg"><p>FOR YOU 1</p></div>
+<div class="card" style="cursor: pointer;"><img src="/images/IMG_1143.jpeg"><p>FOR YOU 2</p></div>
+<div class="card" style="cursor: pointer;"><img src="/images/IMG_0359.jpeg"><p>FOR YOU 3</p></div>
 </div>
 <div style="margin-top:14px"><h3 style="margin-bottom:10px;background:#FF2D95;color:#fff;display:inline-block;padding:4px 8px">SUBSCRIPTIONS — GO PLUS</h3><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:10px">
-<div style="background:#111;border:3px solid #fff;padding:16px;position:relative"><div style="font-size:11px;letter-spacing:1px;color:#aaa">FREE</div><div style="font-size:28px;font-weight:900;margin:6px 0">$0</div><div style="font-size:13px;line-height:1.6">Browse boroughs<br>5 Ask AI chats / day<br>1 Plan<br>10 Saves</div><button style="margin-top:12px;width:100%;padding:10px;font-weight:900;background:#fff;color:#000;border:0;cursor:pointer">Current Plan</button></div>
-<div style="background:#FFE600;color:#000;border:3px solid #FF2D95;padding:16px;position:relative;transform:rotate(-0.5deg)"><div style="position:absolute;top:-12px;right:8px;background:#FF2D95;color:#fff;font-size:11px;font-weight:900;padding:4px 8px">★ MOST POPULAR</div><div style="font-size:11px;letter-spacing:1px;font-weight:900">PLUS</div><div style="font-size:28px;font-weight:900;margin:6px 0">$4.99<span style="font-size:13px">/mo</span></div><div style="font-size:13px;line-height:1.6;font-weight:700">Unlimited Ask AI<br>Unlimited Plans<br>Unlimited Saves<br>Share plans</div><button style="margin-top:12px;width:100%;padding:10px;font-weight:900;background:#000;color:#FFE600;border:0;cursor:pointer">Go Plus →</button></div>
-<div style="background:linear-gradient(135deg,#FF2D95,#3A86FF);color:#fff;border:3px solid #FFE600;padding:16px"><div style="font-size:11px;letter-spacing:1px;font-weight:900">PRO</div><div style="font-size:28px;font-weight:900;margin:6px 0">$9.99<span style="font-size:13px">/mo</span></div><div style="font-size:13px;line-height:1.6">Everything in Plus<br>+ Learns you<br>+ Tonight in Your Borough<br>+ Early access</div><button style="margin-top:12px;width:100%;padding:10px;font-weight:900;background:#FFE600;color:#000;border:0;cursor:pointer">Go Pro →</button></div>
+<div style="background:#111;border:3px solid #fff;padding:16px;position:relative"><div style="font-size:11px;letter-spacing:1px;color:#aaa">FREE</div><div style="font-size:28px;font-weight:900;margin:6px 0">$0</div><div style="font-size:13px;line-height:1.6">Browse boroughs<br>5 Ask AI chats / day<br>1 Plan<br>10 Saves</div><button style="margin-top:12px;width:100%;padding:10px;font-weight:900;background:#fff;color:#000;border:0;cursor:pointer" id="btnFree">Current Plan</button></div>
+<div style="background:#FFE600;color:#000;border:3px solid #FF2D95;padding:16px;position:relative;transform:rotate(-0.5deg)"><div style="position:absolute;top:-12px;right:8px;background:#FF2D95;color:#fff;font-size:11px;font-weight:900;padding:4px 8px">★ MOST POPULAR</div><div style="font-size:11px;letter-spacing:1px;font-weight:900">PLUS</div><div style="font-size:28px;font-weight:900;margin:6px 0">$4.99<span style="font-size:13px">/mo</span></div><div style="font-size:13px;line-height:1.6;font-weight:700">Unlimited Ask AI<br>Unlimited Plans<br>Unlimited Saves<br>Share plans</div><button style="margin-top:12px;width:100%;padding:10px;font-weight:900;background:#000;color:#FFE600;border:0;cursor:pointer" id="btnPlus">Go Plus →</button></div>
+<div style="background:linear-gradient(135deg,#FF2D95,#3A86FF);color:#fff;border:3px solid #FFE600;padding:16px"><div style="font-size:11px;letter-spacing:1px;font-weight:900">PRO</div><div style="font-size:28px;font-weight:900;margin:6px 0">$9.99<span style="font-size:13px">/mo</span></div><div style="font-size:13px;line-height:1.6">Everything in Plus<br>+ Learns you<br>+ Tonight in Your Borough<br>+ Early access</div><button style="margin-top:12px;width:100%;padding:10px;font-weight:900;background:#FFE600;color:#000;border:0;cursor:pointer" id="btnPro">Go Pro →</button></div>
 </div><p style="margin-top:8px;font-size:12px;color:#aaa">MEET AI NY PLUS — Ask AI NY • Build My Plan • Share My Plan • Add to Home Screen • Demo checkout — no real charge, Stripe / Apple Pay at launch</p></div>
 </div>
 <div class="strip"><b>YOUR PHOTOS — tap to make hero</b>
@@ -88,6 +88,141 @@
 <img src="/images/IMG_1574.jpeg" onclick="document.getElementById('heroImg').src=this.src">
 </div></div></div>
 
-<div class="nav"><span class="a">HOME</span><span>Explore</span><span>Plan</span><span>Saved</span><span>You</span></div>
+
+<div class="sec" id="sec-plan" style="border:3px solid #FFE600"><h2>BUILD MY PLAN</h2>
+<p style="font-size:13px;color:#aaa;margin-bottom:10px">Pick a vibe, borough, time — get a real plan.</p>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+<button class="btn y plan-vibe" data-vibe="Food">Food</button><button class="btn w plan-vibe" data-vibe="Art">Art</button><button class="btn w plan-vibe" data-vibe="Nightlife">Nightlife</button><button class="btn w plan-vibe" data-vibe="Chill">Chill</button><button class="btn w plan-vibe" data-vibe="First Time">First Time</button>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px">
+<button class="btn w plan-boro" data-boro="Manhattan">Manhattan</button><button class="btn w plan-boro" data-boro="Brooklyn">Brooklyn</button><button class="btn w plan-boro" data-boro="Queens">Queens</button><button class="btn w plan-boro" data-boro="Bronx">Bronx</button><button class="btn w plan-boro" data-boro="Staten Island">Staten Island</button>
+</div>
+<div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+<button class="btn w plan-time" data-time="2 hours">2 hours</button><button class="btn w plan-time" data-time="Half day">Half day</button><button class="btn w plan-time" data-time="Full day">Full day</button>
+</div>
+<button id="makePlanBtn" class="btn y">MAKE MY PLAN →</button>
+<div id="planResults" style="margin-top:12px"></div>
+</div>
+<div class="sec" id="sec-saved" style="border:3px solid #FF2D95"><h2>SAVED • <span id="savedCount">0</span></h2><p style="font-size:13px;color:#aaa">Tap ♥ Save on any card to save it here. Saved stays on this phone.</p><div id="savedList" style="margin-top:10px"><p style="color:#888;font-size:13px">Nothing saved yet — tap Save on a spot below.</p></div></div>
+<div class="nav" id="bottomNav"><span class="a" data-nav="home">HOME</span><span data-nav="explore">Explore</span><span data-nav="plan">Plan</span><span data-nav="saved">Saved</span><span data-nav="you">You</span></div>
+
+<script>
+// AI NY - iPhone tap fixes
+let saved = JSON.parse(localStorage.getItem('ainy_saved')||'[]');
+let taps = 0;
+function updateSaved(){ const el=document.getElementById('savedCount'); if(el) el.textContent=saved.length; const list=document.getElementById('savedList'); if(list){ if(saved.length===0){ list.innerHTML='<p style="color:#888;font-size:13px">Nothing saved yet — tap Save on a spot below.</p>'; } else { list.innerHTML=saved.map((s,i)=>'<div style="background:#111;padding:10px;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center"><b>'+s+'</b><button onclick="removeSave('+i+')" style="background:#FF2D95;color:#fff;border:0;padding:6px 10px;font-weight:900">Remove</button></div>').join(''); } } }
+function removeSave(i){ saved.splice(i,1); localStorage.setItem('ainy_saved',JSON.stringify(saved)); updateSaved(); }
+function addSave(name){ if(!saved.includes(name)){ saved.push(name); localStorage.setItem('ainy_saved',JSON.stringify(saved)); updateSaved(); alert('Saved: '+name+' — check Saved tab'); } else { alert('Already saved: '+name); } }
+function scrollToId(id){ const el=document.getElementById(id); if(el) el.scrollIntoView({behavior:'smooth'}); }
+document.addEventListener('DOMContentLoaded',()=>{
+  updateSaved();
+  // Bottom nav - tap to scroll
+  document.querySelectorAll('#bottomNav span').forEach(sp=>{
+    sp.addEventListener('click',()=>{
+      document.querySelectorAll('#bottomNav span').forEach(s=>s.classList.remove('a')); sp.classList.add('a');
+      const n=sp.getAttribute('data-nav');
+      if(n==='home') window.scrollTo({top:0,behavior:'smooth'});
+      if(n==='explore') scrollToId('sec-explore');
+      if(n==='plan') scrollToId('sec-plan');
+      if(n==='saved') scrollToId('sec-saved');
+      if(n==='you') scrollToId('sec-plan');
+      taps++;
+    });
+  });
+  // Hero buttons
+  const bp=document.getElementById('buildPlanBtn'); if(bp) bp.addEventListener('click',()=>scrollToId('sec-plan'));
+  const ex=document.getElementById('exploreBtn'); if(ex) ex.addEventListener('click',()=>scrollToId('sec-explore'));
+  // Chips fill input
+  document.querySelectorAll('#chips span').forEach(ch=>{
+    ch.style.cursor='pointer';
+    ch.addEventListener('click',()=>{ const inp=document.getElementById('askInput'); if(inp){ inp.value=ch.textContent; document.getElementById('askBtn').click(); } });
+  });
+  // ASK AI - real answers
+  const askBtn=document.getElementById('askBtn');
+  if(askBtn) askBtn.addEventListener('click',()=>{
+    const q=(document.getElementById('askInput').value||'').toLowerCase();
+    const res=document.getElementById('askResults');
+    let cards=[];
+    if(q.includes('bushwick')||q.includes('hungry')||q.includes('20')||q.includes('cheap')||q.includes('eat')){
+      cards=[['Bushwick Taco Truck','Bushwick • L train • $','Tacos, late night, real Bushwick'],['Flushing Hand-Pulled Noodle','Flushing • 7 train • $','Hand-pulled, huge bowl'],['Arthur Ave Sandwich','Bronx • 4 train • $','Deli hero, old school']];
+    } else if(q.includes('jazz')||q.includes('late')||q.includes('night')){
+      cards=[['Apollo Theater','Harlem • 2/3 train • $$','Legendary, Amateur Night'],['Jazz at Lincoln Center','Midtown • 1 train • $$','Skyline + jazz'],['Village Vanguard','West Village • 1 train • $$','Tiny room, big names']];
+    } else if(q.includes('date')||q.includes('village')){
+      cards=[['West Village Stroll','West Village • 1 train • Free','Brownstones, quiet streets'],['Rooftop Bar','West Village • 1 train • $$','Sunset view'],['Ramen Date','West Village • 1 train • $','Cozy, late']];
+    } else if(q.includes('rain')){
+      cards=[['Met Museum','Upper East Side • 4/5/6 • $$','All day, huge'],['Chelsea Galleries','Chelsea • C/E • Free','Walk, free art'],['Strand Bookstore','East Village • 6 • $','Books, coffee']];
+    } else if(q.includes('photo')||q.includes('spot')){
+      cards=[['DUMBO','Brooklyn • F • Free','Bridge + skyline'],['Top of the Rock','Midtown • B/D/F • $$','Best view'],['Central Park Bow Bridge','Midtown • N/R • Free','Classic shot']];
+    } else if(q.includes('free')){
+      cards=[['Central Park','Midtown • N/R • Free','Walk, row boats'],['High Line','Chelsea • C/E • Free','Elevated park'],['Brooklyn Bridge Walk','Brooklyn • F • Free','Sunset']];
+    } else {
+      cards=[['Bushwick Taco Truck','Bushwick • L train • $','Tacos, late night'],['DUMBO','Brooklyn • F • Free','Bridge + skyline'],['Rooftop Bar','Midtown • N/R • $$','Sunset view']];
+    }
+    res.innerHTML='<h3 style="margin-bottom:8px">AI NY PICKS FOR YOU</h3>'+cards.map(c=>'<div style="background:#111;border:2px solid #333;padding:12px;margin-bottom:8px"><b>'+c[0]+'</b><br><small style="color:#aaa">'+c[1]+'</small><br><span style="font-size:13px">'+c[2]+'</span><br><button onclick="addSave(\''+c[0].replace(/\'/g,"")+ '\')" style="margin-top:8px;background:#FF2D95;color:#fff;border:0;padding:8px 12px;font-weight:900">♥ Save</button></div>').join('');
+    res.scrollIntoView({behavior:'smooth'});
+  });
+  // Plan builder
+  let vibe='Food', boro='Brooklyn', time='Half day';
+  document.querySelectorAll('.plan-vibe').forEach(b=>b.addEventListener('click',()=>{ vibe=b.getAttribute('data-vibe'); document.querySelectorAll('.plan-vibe').forEach(x=>{x.className='btn w plan-vibe'}); b.className='btn y plan-vibe'; }));
+  document.querySelectorAll('.plan-boro').forEach(b=>b.addEventListener('click',()=>{ boro=b.getAttribute('data-boro'); document.querySelectorAll('.plan-boro').forEach(x=>{x.className='btn w plan-boro'}); b.className='btn y plan-boro'; }));
+  document.querySelectorAll('.plan-time').forEach(b=>b.addEventListener('click',()=>{ time=b.getAttribute('data-time'); document.querySelectorAll('.plan-time').forEach(x=>{x.className='btn w plan-time'}); b.className='btn y plan-time'; }));
+  const makeBtn=document.getElementById('makePlanBtn');
+  if(makeBtn) makeBtn.addEventListener('click',()=>{
+    const pr=document.getElementById('planResults');
+    pr.innerHTML='<h3 style="margin-bottom:8px">YOUR PLAN — '+vibe+' • '+boro+' • '+time+'</h3>'
+    +'<div style="background:#111;padding:12px;margin-bottom:8px"><b>1. Start — '+boro+' Morning</b><br><small style="color:#aaa">Coffee + walk • '+time+'</small></div>'
+    +'<div style="background:#111;padding:12px;margin-bottom:8px"><b>2. Midday — '+vibe+' Spot</b><br><small style="color:#aaa">Top pick for '+vibe+' in '+boro+'</small></div>'
+    +'<div style="background:#111;padding:12px;margin-bottom:8px"><b>3. Sunset — Rooftop</b><br><small style="color:#aaa">Night skyline, Empire State lit up</small></div>'
+    +'<button onclick="addSave(\'My Plan: '+vibe+' in '+boro+'\')" style="background:#FF2D95;color:#fff;border:0;padding:10px 14px;font-weight:900">♥ Save This Plan</button>';
+    pr.scrollIntoView({behavior:'smooth'});
+  });
+  // Make borough cards tappable - tap to save
+  document.querySelectorAll('.card').forEach(card=>{
+    card.style.cursor='pointer';
+    card.addEventListener('click',()=>{
+      const name=card.querySelector('b') ? card.querySelector('b').textContent : 'Spot';
+      if(confirm('Save '+name+'?')) addSave(name);
+    });
+  });
+});
+</script>
+
+<script>
+// Ensure EVERY button is clickable - fallback + subscriptions
+document.addEventListener('DOMContentLoaded',()=>{
+  const showToast=(msg)=>{
+    let t=document.getElementById('ai-toast');
+    if(!t){ t=document.createElement('div'); t.id='ai-toast'; t.style.cssText='position:fixed;bottom:70px;left:50%;transform:translateX(-50%);background:#FFE600;color:#000;padding:12px 16px;font-weight:900;border:3px solid #000;z-index:9999;border-radius:8px;max-width:90%;text-align:center'; document.body.appendChild(t); }
+    t.textContent=msg; t.style.display='block'; setTimeout(()=>t.style.display='none',2500);
+  };
+  // Subscriptions
+  const free=document.getElementById('btnFree'); if(free) free.addEventListener('click',()=>showToast('You are on Free — $0 • Browse, 5 chats/day'));
+  const plus=document.getElementById('btnPlus'); if(plus) plus.addEventListener('click',()=>showToast('Plus $4.99/mo — Demo checkout, no real charge. Stripe / Apple Pay at launch'));
+  const pro=document.getElementById('btnPro'); if(pro) pro.addEventListener('click',()=>showToast('Pro $9.99/mo — Demo checkout, no real charge. Stripe / Apple Pay at launch'));
+  // Any other button that still has no handler - make it give feedback instead of dead tap
+  document.querySelectorAll('button').forEach(btn=>{
+    // If button already has a listener via our code, it will still fire - this is just fallback for dead ones
+    // We add a capture check: if button text includes Save, Plus, Pro, etc already handled above, skip duplicate toast
+    const txt=(btn.textContent||'').trim();
+    if(['Current Plan','Go Plus →','Go Pro →','Go Plus','Go Pro'].includes(txt)) return;
+    if(btn.id==='askBtn'||btn.id==='makePlanBtn'||btn.id==='buildPlanBtn'||btn.id==='exploreBtn') return;
+    if(btn.className.includes('plan-vibe')||btn.className.includes('plan-boro')||btn.className.includes('plan-time')) return;
+    btn.addEventListener('click',()=>{ 
+      if(txt.toLowerCase().includes('save')) return;
+      if(txt) showToast(txt+' — tapped!');
+    });
+  });
+  // Make ALL cards tappable for feedback (already have save, but ensure)
+  document.querySelectorAll('.g').forEach(g=>{
+    g.style.cursor='pointer';
+    g.addEventListener('click',()=>{
+      const t=g.textContent.trim().split('\n')[0];
+      if(t) showToast(t+' — tapped!');
+    });
+  });
+  // Fix iPhone tap delay / ensure touch works
+  document.body.style.touchAction='manipulation';
+});
+</script>
 <script>(function(){var loc=location.href.replace(/#.*$/,"");var ATTR_NAMES=["data-product-id","data-productid","data-product_id","product-id","productid","product_id","data-source-entity-id","source-entity-id","source_entity_id","data-product","data-metadata","data-meta"];var DATASET_KEYS=["productId","productid","product_id","sourceEntityId","sourceentityid","source_entity_id","product","metadata","meta"];function readProductId(value){if(typeof value!=="string"||value.length===0)return null;if(/^[0-9]{6,}$/.test(value))return value;var match=value.match(/(?:product(?:_|-)?id|source(?:_|-)?entity(?:_|-)?id)["'=:\s]+([0-9]{6,})/i);return match?match[1]:null}function extractProductId(start){for(var node=start;node&&node!==document.body;node=node.parentElement){for(var i=0;i<ATTR_NAMES.length;i++){var attrValue=node.getAttribute&&node.getAttribute(ATTR_NAMES[i]);var attrProductId=readProductId(attrValue);if(attrProductId)return attrProductId}var dataset=node.dataset||null;if(dataset){for(var j=0;j<DATASET_KEYS.length;j++){var dataValue=dataset[DATASET_KEYS[j]];var dataProductId=readProductId(dataValue);if(dataProductId)return dataProductId}}}return null}function isInlineMediaSlotElement(node){return !!(node&&node.getAttribute&&node.getAttribute("data-clippy-inline-media-slot")!==null)}function findInlineMediaSlot(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(isInlineMediaSlotElement(node))return node}return null}function readInlineMediaUrl(node){if(!node)return null;return node.getAttribute&&((node.getAttribute("data-clippy-inline-media-url")||node.getAttribute("data-url")||node.getAttribute("data_url")))||node.href||null}function stripHash(url){return String(url).replace(/#.*$/,"")}function urlsMatch(a,b){if(!a||!b)return false;try{return stripHash(new URL(a,loc).href)===stripHash(new URL(b,loc).href)}catch(_){return stripHash(a)===stripHash(b)}}function isFirstPartyReelUrl(value){try{var url=new URL(value,loc);if(url.protocol!=="https:")return false;var host=url.hostname.toLowerCase();var supported=host==="instagram.com"||host.endsWith(".instagram.com")||host==="facebook.com"||host.endsWith(".facebook.com");return supported&&/\/reels?\//i.test(url.pathname)}catch(_){return false}}function isInlineMediaUrlClick(node,href){var slot=findInlineMediaSlot(node);if(!slot)return false;var slotUrl=readInlineMediaUrl(slot);if(slotUrl)return urlsMatch(href,slotUrl);return isFirstPartyReelUrl(href)}function findDataHref(start){for(var node=start;node&&node!==document.body;node=node.parentElement){if(node.getAttribute){var href=node.getAttribute("data-href")||node.getAttribute("data-url");if(href)return{href:href,node:node}}}return null}var nativeOpen=window.open;window.open=function(url){if(parent!==window&&typeof url==="string"&&/^https?:\/\//.test(url)){parent.postMessage({type:"ecto:usercontent-link-click",href:url},"*");return null}return nativeOpen?nativeOpen.apply(window,arguments):null};document.addEventListener("click",function(e){var target=e.target instanceof Element?e.target:null;if(!target)return;if(parent===window)return;var a=target.closest?target.closest("a[href]"):null;if(a&&a.href&&/^https?:\/\//.test(a.href)&&a.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(a,a.href))return;var productId=extractProductId(target)||extractProductId(a);if(productId){e.preventDefault();parent.postMessage({type:"ecto-artifact-link-click",productId:productId},"*");return}e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:a.href},"*");return}var dataHref=findDataHref(target);if(dataHref&&/^https?:\/\//.test(dataHref.href)&&dataHref.href.replace(/#.*$/,"")!==loc){if(isInlineMediaUrlClick(dataHref.node,dataHref.href))return;e.preventDefault();parent.postMessage({type:"ecto:usercontent-link-click",href:dataHref.href},"*")}},true)})();</script><script>(function(){var FOCUS_TYPE="ecto:artifact-focus-request";var CLOSE_TYPE="ecto:artifact-close-request";function focusArtifactDocument(){var body=document.body;if(!body)return;try{window.focus();}catch(e){}if(!body.hasAttribute("tabindex"))body.setAttribute("tabindex","-1");try{body.focus({preventScroll:true});}catch(e){try{body.focus();}catch(e2){}}}window.addEventListener("message",function(event){if(event.source!==window.parent)return;var data=event.data;if(!data||typeof data!=="object"||data.type!==FOCUS_TYPE)return;if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",focusArtifactDocument,{once:true});return;}focusArtifactDocument();});window.addEventListener("keydown",function(event){if(event.key!=="Escape")return;window.setTimeout(function(){if(event.defaultPrevented)return;window.parent.postMessage({type:CLOSE_TYPE},"*");},0);});})();</script>
 </body></html>
